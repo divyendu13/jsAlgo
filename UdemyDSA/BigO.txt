@@ -1,0 +1,29 @@
+1. Arithmetic operations are constant
+2. Variable assignment are constant
+3. Accessing element in an array by index or object by ket - is constant
+4. In a loop, the complexity is the length of the loop times the complexity of whatever happens in the loop
+
+O(1) > o(log n) > O(n) > O(nlog n) > O(n^2)
+
+Space complexity
+1. Most primitive data are constant Space
+2. Strings require O(n) space (n is string length)
+3. Reference types are generally O(n) where n is length of array or number of keys (for object)
+
+Big O of Objects
+Insertion, Removal, Access -> O(1)
+Searching   -> O(n)
+Object.keys -> O(n)
+Object.values-> O(n)
+Object.entries-> O(n)
+hasOwnProperty -> O(1)
+
+Big O of Arrays
+Insertion -depends
+Removal - depends
+Searching - O(n)
+Access - O(1)
+push , Pop -> O(1)
+shift,unshift,concat,slice,splice -> O(n)
+sort -> O(n*log n)
+for each,map,filter,reduce.etc -> O(n)
