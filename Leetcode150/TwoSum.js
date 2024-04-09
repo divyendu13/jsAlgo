@@ -12,15 +12,21 @@ Example 1:
 Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
  */
-let nums = [2,7,11,15], target = 9
+let nums = [1,2,7,11,15], target = 9
 let i=0
 let j=nums.length-1
 
 for(k=0;k<nums.length;k++){
     if(nums[i]+nums[j]==target){
         console.log(`${i} and ${j}`)
+        //return
+    }
+    else if(nums[i]+nums[j]<target){
+        i++
     }
     else if(nums[i]+nums[j]>target){
         j--
     }
 }
+console.log(i)
+console.log(j)
