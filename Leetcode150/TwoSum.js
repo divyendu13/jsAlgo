@@ -12,21 +12,23 @@ Example 1:
 Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
  */
-let nums = [1,2,7,11,15], target = 9
-let i=0
-let j=nums.length-1
+//let nums = [-1,-2,-3,-4,-5], target = -8
+//let nums = [1,2,7,11,15], target = 8
+let nums=[1,3,4,2] , target =6
 
-for(k=0;k<nums.length;k++){
-    if(nums[i]+nums[j]==target){
-        console.log(`${i} and ${j}`)
-        //return
-    }
-    else if(nums[i]+nums[j]<target){
-        i++
-    }
-    else if(nums[i]+nums[j]>target){
-        j--
+let i
+let obj={}
+
+for(i=0;i<nums.length;i++){
+    obj[nums[i]]=i
+}
+console.log(obj)
+
+for(i=0;i<nums.length;i++){
+    const n=target - nums[i]
+    if(obj[n] && i!=obj[n]){
+        console.log(`${obj[n]} and ${i}`)
+        return
     }
 }
-console.log(i)
-console.log(j)
+//console.log(`${i} and ${j}`)
