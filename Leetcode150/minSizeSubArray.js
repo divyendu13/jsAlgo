@@ -20,23 +20,27 @@ Output: 0
  */
 
 function minSubAry(target,nums){
+    let start=0
+    let end=0
     let sum=0
-    let subary=[]
-    let j=1
-    for(let i=0;i<nums.length;i++){
-         sum=sum+nums[i]
-         subary.push(nums[i])
-         while(j<nums.length){
-            sum=sum+nums[j]
-            if(sum==target){
-                subary.push(nums[j])
-            }
-            else{
-                j++
-            }
-         }
+    let minLen=Infinity
+
+    while(start<nums.length){
+        if(sum<target && end<nums.length){
+            sum=sum+nums[end]
+            end++
+        }
+        else if(sum>=target){
+            minLen=Math.min(end-start,minLen)
+            sum=sum-nums[start]
+            start++
+        }
+        else{
+            break
+        }
     }
-    return subary.length
+    return minLen
+
 }
 
 console.log(minSubAry(7,[2,3,1,2,4,3]))
