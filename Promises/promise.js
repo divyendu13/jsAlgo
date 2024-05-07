@@ -4,13 +4,13 @@
  */
 
 function sqNumber(num){
-    const promise=new Promise(function(resovle,reject){
+    const promise=new Promise(function(resolve,reject){
         setTimeout(()=>{
             if(typeof num != 'number'){
                 return reject(new Error('Argument of type number is expected'))
             }
             const result = num*num
-            resovle(result)
+            resolve(result)
         },1000)
     })
     return promise
