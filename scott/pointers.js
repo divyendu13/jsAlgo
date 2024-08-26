@@ -4,7 +4,7 @@ num1=10
 console.log(num2)
 
 let obj1 = {
-    'value' : 11
+    'value' : 33
 }
 
 let obj2=obj1

@@ -62,3 +62,4 @@ class LinkedList {
   console.log(myLinkedList)
   console.log(myLinkedList.pop())
   console.log(myLinkedList)
+  console.log("Nothing to pop now")
