@@ -2,7 +2,7 @@
 //inp = this is a phone
 //op = enoh pa s isiht
 
-let inp = "this is a phone"
+let inp = "I have joined zoom"
 let op= ''
 let j =[]
 
